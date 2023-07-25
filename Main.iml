@@ -18,5 +18,6 @@
     <orderEntry type="library" name="activation" level="application" />
     <orderEntry type="library" name="javafx-jmods-20.0" level="application" />
     <orderEntry type="library" name="lib" level="application" />
+    <orderEntry type="library" name="jregex-1.2_01" level="application" />
   </component>
 </module>
