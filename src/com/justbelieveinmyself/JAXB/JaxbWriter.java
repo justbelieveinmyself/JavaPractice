@@ -1,4 +1,4 @@
-package JAXB;
+package com.justbelieveinmyself.JAXB;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;

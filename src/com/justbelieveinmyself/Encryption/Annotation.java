@@ -1,4 +1,4 @@
-package Encryption;
+package com.justbelieveinmyself.Encryption;
 
 
 import java.lang.annotation.ElementType;

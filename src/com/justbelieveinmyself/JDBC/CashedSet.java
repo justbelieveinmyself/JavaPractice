@@ -1,4 +1,4 @@
-package JDBC;
+package com.justbelieveinmyself.JDBC;
 
 import javax.sql.rowset.CachedRowSet;
 import javax.sql.rowset.RowSetProvider;

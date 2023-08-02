@@ -1,8 +1,7 @@
-package RemoteMethodInvoke;
+package com.justbelieveinmyself.RemoteMethodInvoke;
 
 import javax.naming.*;
 import java.rmi.RemoteException;
-import java.util.Enumeration;
 
 public class ClientRMI {
     public static void main(String[] args) throws NamingException, RemoteException {

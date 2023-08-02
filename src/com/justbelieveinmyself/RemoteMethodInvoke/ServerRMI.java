@@ -1,4 +1,4 @@
-package RemoteMethodInvoke;
+package com.justbelieveinmyself.RemoteMethodInvoke;
 
 
 import javax.naming.Context;
@@ -6,7 +6,6 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
-import java.rmi.Naming;
 import java.rmi.RemoteException;
 
 public class ServerRMI { //not working

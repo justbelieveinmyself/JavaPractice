@@ -1,4 +1,4 @@
-package Swing;
+package com.justbelieveinmyself.Swing;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

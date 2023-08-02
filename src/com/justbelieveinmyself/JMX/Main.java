@@ -1,8 +1,7 @@
-package JMX;
+package com.justbelieveinmyself.JMX;
 
 import javax.management.*;
 import java.lang.management.ManagementFactory;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) throws MalformedObjectNameException, NotCompliantMBeanException, InstanceAlreadyExistsException, MBeanRegistrationException, InterruptedException {

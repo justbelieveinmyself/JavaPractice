@@ -42,7 +42,7 @@ To run the demo:
 Overview of the Classes
 =======================
 
-Main Classes:
+com.justbelieveinmyself.com.justbelieveinmyself.DataStructures.Arrays Classes:
 
 	MailHandlerDemo       = The main method creates log messages
 				for the MailHander to capture.  The

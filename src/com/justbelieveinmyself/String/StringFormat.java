@@ -1,4 +1,4 @@
-package String;
+package com.justbelieveinmyself.String;
 
 import java.util.Calendar;
 import java.util.Date;

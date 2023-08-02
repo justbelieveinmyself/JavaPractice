@@ -1,4 +1,4 @@
-package RemoteMethodInvoke;
+package com.justbelieveinmyself.RemoteMethodInvoke;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;

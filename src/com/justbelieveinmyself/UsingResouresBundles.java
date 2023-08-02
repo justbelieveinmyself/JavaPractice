@@ -1,4 +1,4 @@
-package Localization;
+package com.justbelieveinmyself;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Locale;

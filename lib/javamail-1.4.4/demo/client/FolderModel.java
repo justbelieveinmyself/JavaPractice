@@ -45,7 +45,7 @@ public class FolderModel extends AbstractTableModel {
     Folder	folder;
     Message[]	messages;
 
-    String[]	columnNames = { "Date", "From", "Subject"}; 
+    String[]	columnNames = {"com/justbelieveinmyself/Date", "From", "Subject"};
     Class[]	columnTypes = { String.class, String.class, String.class }; 
 
     public void setFolder(Folder what) throws MessagingException {

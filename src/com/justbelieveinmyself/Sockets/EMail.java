@@ -1,4 +1,4 @@
-package Sockets;
+package com.justbelieveinmyself.Sockets;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;

@@ -5,15 +5,7 @@ import com.justbelieveinmyself.ChessGame.pieces.Piece;
 import java.util.Scanner;
 import java.util.Set;
 
-public class InputCoordiantes {
-    public static void main(String[] args) {
-        Board board = new Board();
-        board.setupDefaultPiecesPosition();
-        BoardConsoleRenderer renderer = new BoardConsoleRenderer();
-        renderer.render(board);
-        Coordinates coordinates = inputPieceCoordinatesForColor(Color.WHITE, board);
-        System.out.println(coordinates);
-    }
+public class InputCoordinates {
     static Scanner scanner = new Scanner(System.in);
     public static Coordinates input(){
         while(true){
@@ -50,9 +42,9 @@ public class InputCoordiantes {
     public static Coordinates inputPieceCoordinatesForColor(Color color, Board board)
     {
         while (true) {
-            //System.out.println("Enter coordinates to move");
+            System.out.println("Enter coordinates to move");
             Coordinates coordinates = input();
-            if(!board.isSlotEmpty(coordinates)){
+            if(board.isSlotEmpty(coordinates)){
                 System.out.println("Empty slot");
                 continue;
             }
@@ -67,6 +59,21 @@ public class InputCoordiantes {
                 continue;
             }
             return coordinates;
+        }
+    }
+    public static Coordinates inputAvailableSlot(Set<Coordinates> coordinates)
+    {
+        while (true) {
+            System.out.println("Please enter your move for a selected piece");
+            Coordinates input = input();
+            for(Coordinates c : coordinates){
+                System.out.println(c.rank + "" + c.file);
+            }
+            if(!coordinates.contains(input)){
+                System.out.println("Not available slot");
+                continue;
+            }
+            return input;
         }
     }
 }

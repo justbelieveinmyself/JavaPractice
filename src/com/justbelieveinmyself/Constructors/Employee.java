@@ -1,13 +1,27 @@
-package Constructors;
+package com.justbelieveinmyself.Constructors;
 
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
 
+/**
+ * A class to store data about employees.
+ * @see <a href="https://vk.com/justbeliveinmyself">Vadim Karpenko VK</a>
+ * @version 1.1
+ * @author justbelieveinmyself
+ */
 public class Employee {
+    /**
+     * Useless main, but we can run here a unit tests.
+     * @param args - arguments from command line.
+     */
     public static void main(String[] args) {
         //unit tests
     }
+
+    /**
+     * int field stored the id (private)
+     */
     private int id;
     private static int nextId = 1;
     private double salary;
@@ -56,11 +70,22 @@ public class Employee {
         double increase = salary * percent/100;
         salary += increase;
     }
+
+    /**
+     * Accessor method to the private name field
+     * @return String name of employee
+     */
     public String getName()
     {
         return name;
     }
-    public LocalDate getHireDate()
+
+    /**
+     * Accessor method to the private hire date field
+     * @return hire date employee
+     * @throws NullPointerException when using constructor with no arguments
+     */
+    public LocalDate getHireDate() throws NullPointerException
     {
         return hireDate;
     }

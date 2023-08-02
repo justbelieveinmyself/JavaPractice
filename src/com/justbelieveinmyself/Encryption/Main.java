@@ -1,4 +1,4 @@
-package Encryption;
+package com.justbelieveinmyself.Encryption;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;

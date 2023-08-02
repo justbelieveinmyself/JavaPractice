@@ -1,4 +1,4 @@
-package JDBC;
+package com.justbelieveinmyself.JDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

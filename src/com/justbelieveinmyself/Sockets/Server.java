@@ -1,4 +1,4 @@
-package Sockets;
+package com.justbelieveinmyself.Sockets;
 
 import java.io.IOException;
 import java.io.PrintWriter;

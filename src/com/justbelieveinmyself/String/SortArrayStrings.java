@@ -1,4 +1,4 @@
-package String;
+package com.justbelieveinmyself.String;
 
 import java.text.Collator;
 import java.util.*;

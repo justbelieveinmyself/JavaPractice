@@ -1,4 +1,4 @@
-package Swing.JFX;
+package com.justbelieveinmyself.Swing.JFX;
 
 import javafx.application.Application;
 import javafx.scene.Group;

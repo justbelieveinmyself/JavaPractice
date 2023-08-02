@@ -1,6 +1,17 @@
-package Constructors;
-
+package com.justbelieveinmyself.Constructors;
+//308 page about images <img src="doc-files/help.png" alt="Help image"/>
+/**
+ * This class tests work with the main method
+ * @see Employee
+ * Thank you for learning.
+ * <img src="doc-files/help.png" alt="Help image"/>
+ */
 public class EmployeeTest {
+    /**
+     * This is description for main method. Thanks for watching.
+     * @see Employee#getNewInstanse(Employee) - useless method btw 
+     * @param args - arguments from command line.
+     */
     public static void main(String[] args) {
         Employee[] staff = new Employee[3];
         staff[0] = new Employee(null, 50000, 2002, 10, 2);

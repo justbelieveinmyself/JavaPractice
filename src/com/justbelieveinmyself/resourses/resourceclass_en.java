@@ -1,4 +1,4 @@
-package Localization.resourses;
+package com.justbelieveinmyself.resourses;
 
 import java.util.ListResourceBundle;
 

@@ -56,7 +56,7 @@ To run the demo:
 Overview of the Classes
 =======================
 
-Main Classes:
+com.justbelieveinmyself.com.justbelieveinmyself.DataStructures.Arrays Classes:
 
 	SimpleClient   =    contains main().
 			     Uses the parameters to the application to

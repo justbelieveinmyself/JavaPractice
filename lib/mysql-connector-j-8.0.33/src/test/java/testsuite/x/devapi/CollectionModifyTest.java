@@ -303,7 +303,7 @@ public class CollectionModifyTest extends BaseCollectionTestCase {
         assumeTrue(mysqlVersionMeetsMinimum(ServerVersion.parseVersion("8.0.3")), "MySQL 8.0.3+ is required to run this test.");
 
         // 1. Update the name and zip code of match
-        this.collection.add("{\"_id\": \"1\", \"name\": \"Alice\", \"address\": {\"zip\": \"12345\", \"street\": \"32 Main str\"}}").execute();
+        this.collection.add("{\"_id\": \"1\", \"name\": \"Alice\", \"address\": {\"zip\": \"12345\", \"street\": \"32 com.justbelieveinmyself.com.justbelieveinmyself.DataStructures.Main str\"}}").execute();
         this.collection.add("{\"_id\": \"2\", \"name\": \"Bob\", \"address\": {\"zip\": \"325226\", \"city\": \"San Francisco\", \"street\": \"42 2nd str\"}}")
                 .execute();
 
@@ -311,7 +311,7 @@ public class CollectionModifyTest extends BaseCollectionTestCase {
 
         DocResult docs = this.collection.find().orderBy("$._id").execute();
         assertTrue(docs.hasNext());
-        assertEquals(JsonParser.parseDoc("{\"_id\": \"1\", \"name\": \"Joe\", \"address\": {\"zip\": \"91234\", \"street\": \"32 Main str\"}}").toString(),
+        assertEquals(JsonParser.parseDoc("{\"_id\": \"1\", \"name\": \"Joe\", \"address\": {\"zip\": \"91234\", \"street\": \"32 com.justbelieveinmyself.com.justbelieveinmyself.DataStructures.Main str\"}}").toString(),
                 docs.next().toString());
         assertTrue(docs.hasNext());
         assertEquals(JsonParser

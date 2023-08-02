@@ -1,4 +1,4 @@
-package JMX;
+package com.justbelieveinmyself.JMX;
 
 import javax.management.MXBean;
 import java.util.Date;

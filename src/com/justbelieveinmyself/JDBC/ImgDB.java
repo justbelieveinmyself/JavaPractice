@@ -1,4 +1,4 @@
-package JDBC;
+package com.justbelieveinmyself.JDBC;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

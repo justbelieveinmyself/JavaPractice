@@ -1,4 +1,4 @@
-package RegEX;
+package com.justbelieveinmyself.RegEX;
 
 import jregex.Matcher;
 import jregex.Pattern;
