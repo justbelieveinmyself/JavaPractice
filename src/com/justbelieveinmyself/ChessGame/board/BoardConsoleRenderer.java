@@ -1,5 +1,8 @@
-package com.justbelieveinmyself.ChessGame;
+package com.justbelieveinmyself.ChessGame.board;
 
+import com.justbelieveinmyself.ChessGame.Color;
+import com.justbelieveinmyself.ChessGame.Coordinates;
+import com.justbelieveinmyself.ChessGame.File;
 import com.justbelieveinmyself.ChessGame.pieces.Piece;
 
 import java.util.Set;

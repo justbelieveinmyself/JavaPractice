@@ -1,4 +1,7 @@
-package com.justbelieveinmyself.ChessGame;
+package com.justbelieveinmyself.ChessGame.board;
+
+import com.justbelieveinmyself.ChessGame.Coordinates;
+import com.justbelieveinmyself.ChessGame.File;
 
 import java.util.ArrayList;
 import java.util.List;

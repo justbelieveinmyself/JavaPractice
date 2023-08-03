@@ -1,6 +1,6 @@
 package com.justbelieveinmyself.ChessGame.pieces;
 
-import com.justbelieveinmyself.ChessGame.Board;
+import com.justbelieveinmyself.ChessGame.board.Board;
 import com.justbelieveinmyself.ChessGame.Color;
 import com.justbelieveinmyself.ChessGame.Coordinates;
 import com.justbelieveinmyself.ChessGame.CoordinatesShift;
@@ -33,4 +33,25 @@ public abstract class Piece {
     }
 
     protected abstract Set<CoordinatesShift> getPiecesMoves();
+    public Set<Coordinates> getAttackedSlots(Board board){
+        Set<CoordinatesShift> pieceAttacks = getPiecesAttacks();
+        Set<Coordinates> result = new HashSet<>();
+        for (CoordinatesShift pieceAttack : pieceAttacks) {
+            if(coordinates.canShift(pieceAttack)){
+                Coordinates shiftedCoordinates = coordinates.shift(pieceAttack);
+                if(isSlotAvailableToAttack(shiftedCoordinates, board)){
+                    result.add(shiftedCoordinates);
+                }
+            }
+        }
+        return result;
+    }
+
+    protected boolean isSlotAvailableToAttack(Coordinates coordinates, Board board){
+        return true;
+    }
+
+    protected Set<CoordinatesShift> getPiecesAttacks() {
+        return getPiecesMoves();
+    }
 }

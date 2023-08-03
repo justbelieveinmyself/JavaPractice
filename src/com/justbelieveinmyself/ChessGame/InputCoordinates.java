@@ -1,6 +1,11 @@
 package com.justbelieveinmyself.ChessGame;
 
+import com.justbelieveinmyself.ChessGame.pieces.King;
 import com.justbelieveinmyself.ChessGame.pieces.Piece;
+import com.justbelieveinmyself.ChessGame.board.Board;
+import com.justbelieveinmyself.ChessGame.board.BoardConsoleRenderer;
+import com.justbelieveinmyself.ChessGame.board.BoardFactory;
+import com.justbelieveinmyself.ChessGame.board.Move;
 
 import java.util.Scanner;
 import java.util.Set;
@@ -75,5 +80,31 @@ public class InputCoordinates {
             }
             return input;
         }
+    }
+    public static Move inputMove(Board board, Color color, BoardConsoleRenderer renderer){
+
+        while(true)
+        {
+            Coordinates sourceCoordinates = InputCoordinates.inputPieceCoordinatesForColor(color, board);
+            Piece piece = board.getPiece(sourceCoordinates);
+            Set<Coordinates> availableCoordinates = piece.getAvailableMoves(board);
+            renderer.render(board, piece);
+            Coordinates targetCoordinates = InputCoordinates.inputAvailableSlot(availableCoordinates);
+            Move move = new Move(sourceCoordinates, targetCoordinates);
+            if (validateIfKingInCheckAfterMove(board, color, move)) {
+                System.out.println("your king is under attack!");
+                continue;
+            }
+            return move;
+        }
+    }
+
+    private static boolean validateIfKingInCheckAfterMove(Board board, Color color, Move move) {
+        Board copy = new BoardFactory().copy(board);
+        copy.makeMove(move);
+
+        //we trust that there is king on the board
+        Piece king = copy.getPiecesByColor(color).stream().filter(piece -> piece instanceof King).findFirst().get();
+        return copy.isSlotAttackedByColor(king.coordinates, color.opposite());
     }
 }
