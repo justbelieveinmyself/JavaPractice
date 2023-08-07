@@ -45,15 +45,15 @@ public class BoardConsoleRenderer {
         return colorizeSprite(" "+ selectUnicodeSpriteForPiece(piece) +" ", piece.color, Board.isSlotDark(piece.coordinates), isHighlighted);
     }
     private char selectUnicodeSpriteForPiece(Piece piece){
-        switch(piece.getClass().getSimpleName()){
-            case "Pawn": return 'P'; // ♙
-            case "Knight": return 'k'; //♘
-            case "Queen": return 'Q'; // ♕
-            case "Bishop": return 'B'; //♗
-            case "King": return 'K'; //♔
-            case "Rook": return 'R'; //♕
-            default: return ' ';
-        }
+        return switch (piece.getClass().getSimpleName()) {
+            case "Pawn" -> 'P'; // ♙
+            case "Knight" -> 'k'; //♘
+            case "Queen" -> 'Q'; // ♕
+            case "Bishop" -> 'B'; //♗
+            case "King" -> 'K'; //♔
+            case "Rook" -> 'R'; //♕
+            default -> ' ';
+        };
     }
     private String colorizeSprite(String sprite, Color pieceColor, boolean isSlotDark, boolean isHighlighted){
         // background color + font color + text
