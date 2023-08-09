@@ -6,6 +6,6 @@ import com.justbelieveinmyself.Battleship.Player;
 public class SingleDeckShip extends Ship{
     public SingleDeckShip(Coordinates coordinates, Player player) {
         super(coordinates, player);
-//        this.size = 1;
+        this.size = 1;
     }
 }

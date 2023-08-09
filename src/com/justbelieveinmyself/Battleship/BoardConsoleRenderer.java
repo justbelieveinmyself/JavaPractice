@@ -30,17 +30,49 @@ public class BoardConsoleRenderer {
                 if (board.isSquareEmpty(coordinates)) {
                     line.append(ANSI_WHITE_BACKGROUND + " - " + ANSI_RESET);
                 }else{
-
                     switch(board.getShip(coordinates).getClass().getSimpleName()){
                         case "SingleDeckShip" -> line.append(ANSI_YELLOW_BACKGROUND+ ANSI_BLACK + " 1 "+ ANSI_RESET);
                         case "TwoDeckShip" -> line.append(ANSI_YELLOW_BACKGROUND+ANSI_BLACK + " 2 "+ ANSI_RESET);
                         case "ThreeDeckShip" -> line.append(ANSI_YELLOW_BACKGROUND+ANSI_BLACK + " 3 " + ANSI_RESET);
                         case "FourDeckShip" -> line.append(ANSI_YELLOW_BACKGROUND+ANSI_BLACK +" 4 "+ ANSI_RESET);
                     }
-
                 }
             }
             System.out.println(line);
+        }
+    }
+    public void renderForAttack(Board board){
+        System.out.println( "   " + ANSI_BLACK_BACKGROUND+ ANSI_CYAN + "a  b  c  d  e  f  g  h  i  j" + ANSI_RESET);
+        for (int rank = 1; rank < 11; rank++) {
+            StringBuilder line = new StringBuilder();
+            line.append(rank < 10 ?  " " +ANSI_BLACK_BACKGROUND + ANSI_CYAN  + rank  + ANSI_RESET : ANSI_BLACK_BACKGROUND + ANSI_CYAN + rank + ANSI_RESET);
+            for (File file : File.values()) {
+                Coordinates coordinates = new Coordinates(file, rank);
+                if (board.isSquareAttacked(coordinates) && !board.isSquareEmpty(coordinates)) {
+                    line.append(ANSI_WHITE_BACKGROUND + " + " + ANSI_RESET);
+                }else if(board.isSquareAttacked(coordinates)){
+                    line.append(ANSI_WHITE_BACKGROUND + " - " + ANSI_RESET);
+                } else{
+                    line.append(ANSI_YELLOW_BACKGROUND + "   " + ANSI_RESET);
+                }
+            }
+            System.out.println(line);
+        }
+    }
+    public static void clear(){
+        for (int i = 0; i < 100; i++) {
+            System.out.println();
+        }
+    }
+    public static void waitSwapPlayers(int seconds){
+        System.out.println("Waiting to swap players " + seconds +" sec!");
+        for (int i = 0; i < seconds; i++) {
+            System.out.println(i+1);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

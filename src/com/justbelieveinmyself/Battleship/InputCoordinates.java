@@ -1,11 +1,14 @@
 package com.justbelieveinmyself.Battleship;
 
+
+
 import java.util.Scanner;
 
 public class InputCoordinates {
     private static Scanner scanner = new Scanner(System.in);
 
-    public Coordinates getInputCoordinates(){
+
+    public static Coordinates getInputCoordinates(){
 
         System.out.println("Enter coordinates (ex. a 3)");
         while(true) {
@@ -41,5 +44,15 @@ public class InputCoordinates {
 
             return new Coordinates(file, rank);
         }
+    }
+    public static Player getInputPlayerInfo(){
+        System.out.println("Enter your name.");
+        String name = scanner.nextLine();
+        System.out.println("Enter your age.");
+        int age = scanner.nextInt();
+        System.out.println("Enter your country.");
+        scanner.nextLine();
+        String country = scanner.nextLine();
+        return new Player(name, age, country);
     }
 }
