@@ -1,4 +1,4 @@
-package com.justbelieveinmyself;
+package com.justbelieveinmyself.Localization;
 
 import java.util.Date;
 

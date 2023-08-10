@@ -1,4 +1,4 @@
-package com.justbelieveinmyself.Constructors;
+package com.justbelieveinmyself.javalang.ConstructorsInstanceofEqualsCasts;
 //308 page about images <img src="doc-files/help.png" alt="Help image"/>
 /**
  * This class tests work with the main method

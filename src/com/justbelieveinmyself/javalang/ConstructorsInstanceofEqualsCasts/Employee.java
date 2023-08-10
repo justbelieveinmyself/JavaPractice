@@ -1,4 +1,4 @@
-package com.justbelieveinmyself.Constructors;
+package com.justbelieveinmyself.javalang.ConstructorsInstanceofEqualsCasts;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -85,12 +85,14 @@ public class Employee {
      * @return hire date employee
      * @throws NullPointerException when using constructor with no arguments
      */
-    public LocalDate getHireDate() throws NullPointerException
-    {
+    public LocalDate getHireDate() throws NullPointerException {
         return hireDate;
     }
-    public boolean equals(Employee other)
-    {
-        return name.equals(other.name); // we can access to private field
+    @Override
+    public boolean equals(Object otherObject){
+        if(this == otherObject) return true;
+        if(otherObject == null || otherObject.getClass() != this.getClass()) return false;
+        Employee other = (Employee) otherObject;
+        return this.name.equals(other.name) && this.salary == other.salary && this.hireDate.equals(other.hireDate);
     }
 }

@@ -1,4 +1,4 @@
-package com.justbelieveinmyself;
+package com.justbelieveinmyself.Date;
 
 import java.sql.SQLOutput;
 import java.time.DayOfWeek;
