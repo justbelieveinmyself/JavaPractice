@@ -30,7 +30,7 @@ public class Employee implements Comparable<Employee>, Cloneable {
 //        }
 //        this.name = Objects.requireNonNull(name, "Name cannot be null"); //will throw exception with description
 //        id = nextId++;
-        this.name = Objects.requireNonNullElse(name, "unknown");
+        this.name = name;
         this.salary = salary;
         this.hireDate = LocalDate.of(year, month, day);
     }

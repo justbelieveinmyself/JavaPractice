@@ -9,6 +9,10 @@ import java.time.Instant;
 public class TimerTest {
     public static void main(String[] args) {
         Timer timer = new Timer(1000, new TimePrinter());
+//        Timer timer = new Timer(1000, event -> {
+//            System.out.println("At the tone, the time is " + Instant.ofEpochMilli(event.getWhen()));
+//            Toolkit.getDefaultToolkit().beep();
+//        });
         timer.start();
         JOptionPane.showConfirmDialog(null, "Quit program?");
         System.exit(0);
