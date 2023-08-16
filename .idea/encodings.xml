@@ -2,7 +2,8 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/com/justbelieveinmyself/ChessGame/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/justbelieveinmyself/Hangman/GameUtil.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/justbelieveinmyself/Hangman/words.txt" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/com/justbelieveinmyself/RegEX/UnicodeSymbols.java" charset="windows-1251" />
-    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
